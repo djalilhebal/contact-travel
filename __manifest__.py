@@ -5,6 +5,8 @@
     'summary': 'Contact and travel stuff',
     'depends': ['base'],
     'data': [
+        'views/voyage_views.xml',
+        'security/ir.model.access.csv',
     ],
     'installable': True,
     'application': True,

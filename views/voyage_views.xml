@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="view_contact_voyage_form" model="ir.ui.view">
+        <field name="name">contact_travel.voyage.form</field>
+        <field name="model">contact_travel.voyage</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="nom"/>
+                        <field name="date_depart"/>
+                        <field name="destination"/>
+                        <field name="contact_id"/>
+                        <field name="prix"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_contact_voyage_tree" model="ir.ui.view">
+        <field name="name">contact_travel.voyage.tree</field>
+        <field name="model">contact_travel.voyage</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="nom"/>
+                <field name="date_depart"/>
+                <field name="destination"/>
+                <field name="contact_id"/>
+                <field name="prix"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="action_contact_voyage" model="ir.actions.act_window">
+        <field name="name">Voyage</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">contact_travel.voyage</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem
+        id="menu_contact_root"
+        name="Contact Voyage"
+        sequence="10"
+    />
+
+    <menuitem
+        id="menu_operation_root"
+        name="Operations"
+        parent="menu_contact_root"
+        sequence="10"
+    />
+
+    <menuitem
+        id="menu_voyage_root"
+        name="List voyages"
+        parent="menu_operation_root"
+        action="action_contact_voyage"
+        sequence="10"
+    />
+
+</odoo>
