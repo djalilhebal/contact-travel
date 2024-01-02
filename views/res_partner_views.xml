@@ -11,7 +11,13 @@
                 Voyages de l'Utilisateur (<field name="voyages_count" />)
                 </button>
             </xpath>
+
+            <!-- Show the reward level on the inherited form after the category field -->
+            <xpath expr="//field[@name='category_id']" position="after">
+                <field name="niv_recomp"/>
+            </xpath>
         </field>
+
     </record>
 
 </odoo>
