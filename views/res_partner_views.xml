@@ -7,8 +7,8 @@
         <field name="inherit_id" ref="base.view_partner_form"/> 
         <field name="arch" type="xml">
             <xpath expr="//sheet//div" position="inside">
-                <button name="action_view_partner" type="object">
-                Voyages de l'Utilisateur (<field name="voyages_count" />)
+                <button name="action_view_partner" type="object" icon="fa-map">
+                    <field name="voyages_count" string="Voyages de l'Utilisateur" widget="statinfo"/>
                 </button>
             </xpath>
 
