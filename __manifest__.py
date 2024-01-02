@@ -1,8 +1,10 @@
 # -*- coding: utf-8 -*-
 {
-    'name' : 'ContactTravel',
-    'version': '17.0',
+    'name' : 'Contact Travel',
+    'version': '0.0.1',
     'summary': 'Contact and travel stuff',
+    'author': "Abdeldjalil Hebal",
+    'website': "https://github.com/djalilhebal/contact-travel",
     'depends': ['base'],
     'data': [
         'views/voyage_views.xml',
